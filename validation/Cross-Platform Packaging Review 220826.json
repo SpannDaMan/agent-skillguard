@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "candidate": "agent-skillguard 0.1.1",
+  "product_revision_sha256": "b1b36eaad69545e20a9330665cdc620a093528f05bc5584111af758201a721eb",
+  "status": "pass",
+  "checks": {
+    "skills_only": "pass",
+    "no_mcp_declaration": "pass",
+    "codex_manifest": "pass",
+    "claude_marketplace_and_plugin_manifests": "pass",
+    "openai_submission_schema": "pass",
+    "privacy_terms_support_funding": "pass",
+    "transparent_asset_family": "pass",
+    "public_boundary_scan": "pass"
+  },
+  "evidence_boundary": "Local package-parity review only; not hosted CI, repository, install, or provider acceptance.",
+  "publication_action": "none"
+}

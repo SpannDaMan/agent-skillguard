@@ -1,0 +1,18 @@
+name: Feature request
+description: Propose a bounded rule, output, or workflow improvement.
+body:
+  - type: textarea
+    attributes:
+      label: Review job to be done
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed five-minute demonstration
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: False-positive and maintenance risks
+    validations:
+      required: true

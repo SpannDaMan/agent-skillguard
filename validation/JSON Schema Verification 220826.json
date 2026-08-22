@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "candidate": "agent-skillguard 0.1.1",
+  "product_revision_sha256": "b1b36eaad69545e20a9330665cdc620a093528f05bc5584111af758201a721eb",
+  "status": "pass",
+  "command": [
+    "python",
+    "-B",
+    "tools/validate_json_schema.py",
+    "--schema",
+    "submission/openai-plugin-submission.schema.json",
+    "--instance",
+    "submission/openai-plugin-submission.json"
+  ],
+  "exit_code": 0,
+  "validator_sha256": "7373319a0243f5c59241f719627dd26e0153edf99e614ac58154ddb4b3b30c39",
+  "schema_sha256": "7df1390f95ecba162f57c56564bf08e5bb0695eaa676a107be026e2a6cb27ac1",
+  "instance_sha256": "26d53f15b7c6bac0c4d276741d537a921a3267d64941c5bd00110810eaaa2842",
+  "evidence_boundary": "Local schema validation only; not provider acceptance.",
+  "publication_action": "none"
+}

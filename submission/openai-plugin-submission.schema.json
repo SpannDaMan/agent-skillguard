@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version", "submission_type", "plugin_name", "publisher", "category", "short_description", "long_description", "website_url", "support_url", "privacy_policy_url", "terms_url", "starter_prompts", "positive_tests", "negative_tests", "availability", "release_notes", "publication_action"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "submission_type": {"type": "string", "const": "skills_only"},
+    "plugin_name": {"type": "string", "const": "Agent SkillGuard"},
+    "publisher": {"type": "string", "const": "Orbral"},
+    "category": {"type": "string", "const": "Security"},
+    "short_description": {"type": "string", "const": "Scan before you install."},
+    "long_description": {"type": "string", "minLength": 80},
+    "website_url": {"type": "string", "pattern": "^https://github\\.com/SpannDaMan/agent-skillguard$"},
+    "support_url": {"type": "string", "pattern": "SUPPORT\\.md$"},
+    "privacy_policy_url": {"type": "string", "pattern": "PRIVACY\\.md$"},
+    "terms_url": {"type": "string", "pattern": "TERMS\\.md$"},
+    "starter_prompts": {"type": "array", "minItems": 3, "maxItems": 3, "uniqueItems": true, "items": {"type": "string"}},
+    "positive_tests": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"type": "object", "required": ["id", "prompt", "expected_behavior", "expected_result_shape"]}},
+    "negative_tests": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "object", "required": ["id", "prompt", "expected_behavior", "why_not_complete"]}},
+    "availability": {"type": "object", "required": ["requested_regions", "decision"]},
+    "release_notes": {"type": "string", "minLength": 40},
+    "publication_action": {"type": "string", "const": "none"}
+  },
+  "additionalProperties": false
+}

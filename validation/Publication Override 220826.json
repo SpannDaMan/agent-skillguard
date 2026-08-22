@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "candidate": "agent-skillguard 0.1.1",
+  "product_revision_sha256": "b1b36eaad69545e20a9330665cdc620a093528f05bc5584111af758201a721eb",
+  "status": "scoped_override_recorded",
+  "scope": "Agent SkillGuard public-package preparation and root-owned publication only",
+  "private_pilot_started": false,
+  "private_pilot_completed": false,
+  "override_effect": "The uncompleted private pilot is preserved as uncompleted and cannot be represented as user validation.",
+  "does_not_establish": [
+    "public repository",
+    "release",
+    "hosted CI",
+    "public install",
+    "OpenAI approval",
+    "Claude acceptance",
+    "pilot completion"
+  ],
+  "publication_action": "none"
+}

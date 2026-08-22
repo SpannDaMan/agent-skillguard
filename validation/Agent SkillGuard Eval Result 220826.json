@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "suite": "agent-skillguard-deterministic-v1",
+  "status": "pass",
+  "passed": 17,
+  "total": 17,
+  "score": 1.0,
+  "cases": [
+    {
+      "id": "remote-pipe-curl",
+      "status": "pass",
+      "found_rules": [
+        "SG001"
+      ],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "remote-pipe-wget",
+      "status": "pass",
+      "found_rules": [
+        "SG001"
+      ],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "remote-download-only",
+      "status": "pass",
+      "found_rules": [],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "destructive-unix-root",
+      "status": "pass",
+      "found_rules": [
+        "SG002"
+      ],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "destructive-unix-home-fr",
+      "status": "pass",
+      "found_rules": [
+        "SG002"
+      ],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "destructive-local-file",
+      "status": "pass",
+      "found_rules": [],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "wildcard-permission",
+      "status": "pass",
+      "found_rules": [
+        "SG003"
+      ],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "named-permission",
+      "status": "pass",
+      "found_rules": [],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "secret-transfer",
+      "status": "pass",
+      "found_rules": [
+        "SG004"
+      ],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "secret-prohibition",
+      "status": "pass",
+      "found_rules": [],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "encoded-powershell",
+      "status": "pass",
+      "found_rules": [
+        "SG005"
+      ],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "persistence-crontab",
+      "status": "pass",
+      "found_rules": [
+        "SG006"
+      ],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "unpinned-vcs",
+      "status": "pass",
+      "found_rules": [
+        "SG007"
+      ],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "pinned-vcs",
+      "status": "pass",
+      "found_rules": [],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "authority-override",
+      "status": "pass",
+      "found_rules": [
+        "SG008"
+      ],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "instruction-hierarchy",
+      "status": "pass",
+      "found_rules": [],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    },
+    {
+      "id": "clean-local-reader",
+      "status": "pass",
+      "found_rules": [],
+      "missing_rules": [],
+      "forbidden_rules_found": []
+    }
+  ],
+  "publication_action": "none",
+  "product_revision_sha256": "b1b36eaad69545e20a9330665cdc620a093528f05bc5584111af758201a721eb"
+}

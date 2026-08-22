@@ -1,0 +1,16 @@
+{
+  "name": "agent-skillguard",
+  "description": "A focused marketplace for the Agent SkillGuard skills-only plugin.",
+  "owner": {
+    "name": "Orbral"
+  },
+  "plugins": [
+    {
+      "name": "agent-skillguard",
+      "source": "./plugins/agent-skillguard",
+      "description": "Scan agent skills locally for reviewable risk patterns before installation.",
+      "version": "0.1.1",
+      "category": "security"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "mode": "targeted",
+  "candidate": "agent-skillguard 0.1.1",
+  "product_revision_sha256": "b1b36eaad69545e20a9330665cdc620a093528f05bc5584111af758201a721eb",
+  "checks": {
+    "required_files": "pass",
+    "text_safety": "pass",
+    "metadata": "pass",
+    "assets": "pass",
+    "logo_provenance": "pass",
+    "submission_schema": "pass",
+    "claims_and_behavior": "pass"
+  },
+  "publication_action": "none",
+  "errors": []
+}

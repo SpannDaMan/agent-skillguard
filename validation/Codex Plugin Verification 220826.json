@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "candidate": "agent-skillguard 0.1.1",
+  "product_revision_sha256": "b1b36eaad69545e20a9330665cdc620a093528f05bc5584111af758201a721eb",
+  "status": "pass",
+  "exit_code": 0,
+  "validated_plugin_path": "plugins/agent-skillguard",
+  "working_directory": ".",
+  "command": [
+    "python",
+    "$CODEX_HOME/skills/.system/plugin-creator/scripts/validate_plugin.py",
+    "plugins/agent-skillguard"
+  ],
+  "tool": {
+    "name": "Codex plugin-creator validate_plugin.py",
+    "identity": "sha256",
+    "sha256": "4e84c911479e4d158d723ed8ccc881d3499e580fbf5650e60d379a1a25ac3186",
+    "bytes": 21809
+  },
+  "output": "Plugin validation passed: plugins/agent-skillguard",
+  "publication_action": "none"
+}
