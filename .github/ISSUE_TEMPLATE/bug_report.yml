@@ -1,0 +1,19 @@
+name: Bug report
+description: Report deterministic scanner behavior that differs from the documented contract.
+body:
+  - type: textarea
+    attributes:
+      label: Minimal safe fixture
+      description: Remove credentials and proprietary content.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Command and exit code
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected and observed result
+    validations:
+      required: true

@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.coverage
+htmlcov/
+validation/generated/
+*.whl
+# Retired local rollback inputs; never include them in the public source history.
+plugins/agent-skillguard/assets/Agent SkillGuard Agent Smith Palette Master 210826.png
+plugins/agent-skillguard/assets/Agent SkillGuard GPT Image 2 Master 140826.png

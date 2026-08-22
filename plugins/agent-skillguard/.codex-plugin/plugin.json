@@ -1,0 +1,35 @@
+{
+  "name": "agent-skillguard",
+  "version": "0.1.1",
+  "description": "Scan agent skills locally for reviewable risk patterns before installation.",
+  "author": {
+    "name": "Orbral",
+    "url": "https://github.com/SpannDaMan"
+  },
+  "homepage": "https://github.com/SpannDaMan/agent-skillguard",
+  "repository": "https://github.com/SpannDaMan/agent-skillguard",
+  "license": "MIT",
+  "keywords": ["codex", "agents", "security", "sarif", "plugins"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent SkillGuard",
+    "shortDescription": "Scan before you install.",
+    "longDescription": "Agent SkillGuard performs deterministic local pre-install inspection of agent skills. It reports matched versioned rules, bounded evidence, remediation, and explicit non-coverage without executing, installing, enabling, certifying, or uploading the target.",
+    "developerName": "Orbral",
+    "category": "Security",
+    "capabilities": ["Local scan", "Versioned rule corpus", "Fixture-backed findings", "Explicit non-coverage", "No credentials"],
+    "websiteURL": "https://github.com/SpannDaMan/agent-skillguard",
+    "privacyPolicyURL": "https://github.com/SpannDaMan/agent-skillguard/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/SpannDaMan/agent-skillguard/blob/main/TERMS.md",
+    "defaultPrompt": [
+      "Scan this skill before I install it.",
+      "Explain every flagged pattern and its evidence.",
+      "Compare this package against the public fixture corpus."
+    ],
+    "brandColor": "#0183E0",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
+    "logoDark": "./assets/logo-dark.png",
+    "screenshots": ["./assets/screenshot1.png"]
+  }
+}

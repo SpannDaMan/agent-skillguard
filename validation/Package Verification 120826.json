@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "candidate": "agent-skillguard 0.1.0",
+  "product_revision_sha256": "10f96d20297a66a7051edb1aeee240456d2d00b9f8ba547dc7ae89a2305b406a",
+  "status": "pass",
+  "python_version": "3.12",
+  "install_source": ".",
+  "runtime_dependencies": [],
+  "wheel": {
+    "filename": "agent_skillguard-0.1.0-py3-none-any.whl",
+    "sha256": "ce931593c0cd80882b17efdb81d4c98daeb3a769a801213539d03cdc1b1d8365",
+    "bytes": 13296
+  },
+  "checks": [
+    {
+      "name": "pep517_wheel_and_clean_install",
+      "status": "pass"
+    },
+    {
+      "name": "pip_check",
+      "status": "pass",
+      "result": "No broken requirements found."
+    },
+    {
+      "name": "installed_cli_version",
+      "status": "pass",
+      "result": "agent-skillguard 0.1.0"
+    },
+    {
+      "name": "installed_clean_fixture",
+      "status": "pass",
+      "result": "exit 0; 0 active findings"
+    },
+    {
+      "name": "installed_unsafe_fixture",
+      "status": "pass",
+      "result": "exit 1; 5 active findings"
+    },
+    {
+      "name": "installed_rule_resource",
+      "status": "pass",
+      "result": "8 rules loaded outside the repository root"
+    }
+  ],
+  "publication_action": "none"
+}

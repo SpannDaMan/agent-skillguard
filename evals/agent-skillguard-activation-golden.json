@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0",
+  "suite_id": "agent-skillguard-activation-v1",
+  "plugin": "agent-skillguard",
+  "claim_boundary": "This receipt validates the declared activation contract and case inventory only; it does not prove model selection, semantic quality, runtime execution, or downstream compliance.",
+  "cases": [
+    {
+      "id": "SG-D01",
+      "class": "direct",
+      "prompt": "Scan this skill before I install it.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-D02",
+      "class": "direct",
+      "prompt": "Inspect this agent plugin for risky instructions.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-D03",
+      "class": "direct",
+      "prompt": "Audit this local skill package without executing it.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-D04",
+      "class": "direct",
+      "prompt": "Explain every Agent SkillGuard finding in this report.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-D05",
+      "class": "direct",
+      "prompt": "Compare this package against the public rule fixtures.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-D06",
+      "class": "direct",
+      "prompt": "Check this manifest for broad permission requests.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-D07",
+      "class": "direct",
+      "prompt": "Review this SKILL.md for authority-override patterns.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-D08",
+      "class": "direct",
+      "prompt": "Validate this SkillGuard report locally.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-D09",
+      "class": "direct",
+      "prompt": "Export these local static findings as SARIF.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-D10",
+      "class": "direct",
+      "prompt": "Show which versioned rules this package matched.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-I01",
+      "class": "indirect",
+      "prompt": "Is this agent skill safe to install?",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-I02",
+      "class": "indirect",
+      "prompt": "Can you review this plugin before I trust it?",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-I03",
+      "class": "indirect",
+      "prompt": "I found a skill online and want a local risk check first.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-I04",
+      "class": "indirect",
+      "prompt": "Does this package ask for permissions it probably does not need?",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-I05",
+      "class": "indirect",
+      "prompt": "I want to understand suspicious commands in this agent package.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-I06",
+      "class": "indirect",
+      "prompt": "Please give me a pre-install review of these instructions.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-I07",
+      "class": "indirect",
+      "prompt": "Could this skill be trying to send credentials somewhere?",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-I08",
+      "class": "indirect",
+      "prompt": "I need a bounded static report before enabling this plugin.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-I09",
+      "class": "indirect",
+      "prompt": "Which local files in this package trigger review rules?",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-I10",
+      "class": "indirect",
+      "prompt": "Help me distinguish a true match from a false positive here.",
+      "expected_activation": true,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-N01",
+      "class": "negative",
+      "prompt": "Run this plugin in a sandbox and certify it is safe.",
+      "expected_activation": false,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-N02",
+      "class": "negative",
+      "prompt": "Remove the malware from this package automatically.",
+      "expected_activation": false,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-N03",
+      "class": "negative",
+      "prompt": "Upload this private skill to a remote scanner.",
+      "expected_activation": false,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-N04",
+      "class": "negative",
+      "prompt": "Install the plugin after the scan without asking me.",
+      "expected_activation": false,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-N05",
+      "class": "negative",
+      "prompt": "Monitor this skill at runtime for network attacks.",
+      "expected_activation": false,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-N06",
+      "class": "negative",
+      "prompt": "Guarantee that this package contains no malicious behavior.",
+      "expected_activation": false,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-N07",
+      "class": "negative",
+      "prompt": "Give this plugin administrator access so the scan is complete.",
+      "expected_activation": false,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-N08",
+      "class": "negative",
+      "prompt": "Rewrite this long request without losing requirements.",
+      "expected_activation": false,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-N09",
+      "class": "negative",
+      "prompt": "Record a receipt for the commands from this run.",
+      "expected_activation": false,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    },
+    {
+      "id": "SG-N10",
+      "class": "negative",
+      "prompt": "Choose a model route and dispatch it now.",
+      "expected_activation": false,
+      "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
+      "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",
+      "evidence_oracle": "The job remains static local inspection backed by versioned rules and public-safe fixtures; runtime and safety-certification claims remain excluded."
+    }
+  ]
+}

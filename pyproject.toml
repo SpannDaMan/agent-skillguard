@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-skillguard"
+version = "0.1.1"
+description = "Scan agent skills locally for reviewable risk patterns before installation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Orbral"}]
+keywords = ["codex", "agents", "security", "sarif", "plugins"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/SpannDaMan/agent-skillguard"
+Repository = "https://github.com/SpannDaMan/agent-skillguard"
+Issues = "https://github.com/SpannDaMan/agent-skillguard/issues"
+
+[project.scripts]
+skillguard = "skillguard:main"
+
+[tool.setuptools]
+py-modules = ["skillguard"]
+package-dir = {"" = "plugins/agent-skillguard/scripts"}
+
+[tool.setuptools.data-files]
+"share/agent-skillguard/rules" = ["plugins/agent-skillguard/rules/default-rules.json", "plugins/agent-skillguard/rules/non-coverage.json"]
+"share/agent-skillguard/fixtures" = ["plugins/agent-skillguard/fixtures/fixture-manifest.json"]
+"share/agent-skillguard/fixtures/positive" = [
+  "plugins/agent-skillguard/fixtures/positive/sg001.md",
+  "plugins/agent-skillguard/fixtures/positive/sg002.sh",
+  "plugins/agent-skillguard/fixtures/positive/sg003.json",
+  "plugins/agent-skillguard/fixtures/positive/sg004.md",
+  "plugins/agent-skillguard/fixtures/positive/sg005.ps1",
+  "plugins/agent-skillguard/fixtures/positive/sg006.ps1",
+  "plugins/agent-skillguard/fixtures/positive/sg007.sh",
+  "plugins/agent-skillguard/fixtures/positive/sg008.md",
+]
+"share/agent-skillguard/fixtures/negative" = [
+  "plugins/agent-skillguard/fixtures/negative/reviewed-download.md",
+  "plugins/agent-skillguard/fixtures/negative/narrow-delete.ps1",
+  "plugins/agent-skillguard/fixtures/negative/least-privilege.json",
+  "plugins/agent-skillguard/fixtures/negative/hierarchy.md",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "candidate": "agent-skillguard 0.1.1",
+  "product_revision_sha256": "bdde7ac80e84979e652504b24348ebc0a88e8a204ddd402cc6e23b7b055d3faf",
+  "status": "pass",
+  "validated_paths": [
+    ".",
+    "plugins/agent-skillguard"
+  ],
+  "checks": [
+    {
+      "command": [
+        "claude",
+        "plugin",
+        "validate",
+        "."
+      ],
+      "exit_code": 0,
+      "status": "pass"
+    },
+    {
+      "command": [
+        "claude",
+        "plugin",
+        "validate",
+        "plugins/agent-skillguard"
+      ],
+      "exit_code": 0,
+      "status": "pass"
+    }
+  ],
+  "tool": {
+    "name": "Claude Code",
+    "version": "2.1.139 (Claude Code)"
+  },
+  "evidence_boundary": "Local Claude package validation only; not marketplace acceptance.",
+  "publication_action": "none"
+}

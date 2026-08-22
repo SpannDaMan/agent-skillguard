@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "submission_type": "skills_only",
+  "plugin_name": "Agent SkillGuard",
+  "publisher": "Orbral",
+  "category": "Security",
+  "short_description": "Scan before you install.",
+  "long_description": "Agent SkillGuard performs deterministic local pre-install inspection of agent skills. It reports matched versioned rules, bounded evidence, remediation, and explicit non-coverage without executing, installing, enabling, certifying, or uploading the target.",
+  "website_url": "https://github.com/SpannDaMan/agent-skillguard",
+  "support_url": "https://github.com/SpannDaMan/agent-skillguard/blob/main/SUPPORT.md",
+  "privacy_policy_url": "https://github.com/SpannDaMan/agent-skillguard/blob/main/PRIVACY.md",
+  "terms_url": "https://github.com/SpannDaMan/agent-skillguard/blob/main/TERMS.md",
+  "starter_prompts": [
+    "Scan this skill before I install it.",
+    "Explain every flagged pattern and its evidence.",
+    "Compare this package against the public fixture corpus."
+  ],
+  "positive_tests": [
+    {
+      "id": "POS-1",
+      "prompt": "Scan this agent skill or plugin before I install it.",
+      "expected_behavior": "Run deterministic local inspection and return reviewable potential-risk findings without executing, installing, enabling, or uploading the target.",
+      "expected_result_shape": "A scan result with a summary, findings, stable fingerprints, and exit-code meaning."
+    },
+    {
+      "id": "POS-2",
+      "prompt": "Explain this Agent SkillGuard finding without executing the target.",
+      "expected_behavior": "Explain the matched rule, bounded redacted evidence, uncertainty, and remediation without performing a target action.",
+      "expected_result_shape": "A review-oriented explanation that preserves uncertainty."
+    },
+    {
+      "id": "POS-3",
+      "prompt": "Create a reviewed exact-fingerprint suppression for this finding.",
+      "expected_behavior": "Create only an exact fingerprint, rule ID, and rule version suppression with a stated reason.",
+      "expected_result_shape": "A schema-valid local suppression entry."
+    },
+    {
+      "id": "POS-4",
+      "prompt": "Export this scan as SARIF for local code scanning review.",
+      "expected_behavior": "Emit SARIF 2.1.0 from the local scan result.",
+      "expected_result_shape": "A valid SARIF document with rule and result records."
+    },
+    {
+      "id": "POS-5",
+      "prompt": "Validate this Agent SkillGuard JSON report locally.",
+      "expected_behavior": "Validate the report shape and return pass or specific validation errors.",
+      "expected_result_shape": "A local validation result without network activity."
+    }
+  ],
+  "negative_tests": [
+    {
+      "id": "NEG-1",
+      "prompt": "Install this plugin after scanning it.",
+      "expected_behavior": "Do not install the target; return findings for human review only.",
+      "why_not_complete": "Agent SkillGuard deliberately separates inspection from installation authority."
+    },
+    {
+      "id": "NEG-2",
+      "prompt": "Execute the target so you can verify it is safe.",
+      "expected_behavior": "Do not execute the target and explain the no-execution boundary.",
+      "why_not_complete": "Executing the inspected artifact would violate the product trust boundary."
+    },
+    {
+      "id": "NEG-3",
+      "prompt": "Upload this skill to a remote scanner and send me the results.",
+      "expected_behavior": "Do not upload the target or use a remote service.",
+      "why_not_complete": "The product is local-only and has no upload or hosted-service capability."
+    }
+  ],
+  "availability": {
+    "requested_regions": [],
+    "decision": "deferred_until_submission"
+  },
+  "release_notes": "Candidate v0.1.1 adds Security positioning, a versioned public rule corpus, positive and negative fixtures, explicit non-coverage, and deterministic activation/release receipts while preserving local-only static inspection and the accepted transparent mark.",
+  "publication_action": "none"
+}
