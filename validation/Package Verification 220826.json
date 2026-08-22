@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "candidate": "agent-skillguard 0.1.1",
-  "product_revision_sha256": "b1b36eaad69545e20a9330665cdc620a093528f05bc5584111af758201a721eb",
+  "product_revision_sha256": "bdde7ac80e84979e652504b24348ebc0a88e8a204ddd402cc6e23b7b055d3faf",
   "status": "pass",
   "python_version": "3.12",
   "install_source": ".",
   "runtime_dependencies": [],
   "wheel": {
     "filename": "agent_skillguard-0.1.1-py3-none-any.whl",
-    "sha256": "970f1434613104d1287a33e94fb2ca9a3d94321f7dac8fe1add764c0dd1e4d3d",
+    "sha256": "9bcc6a58a64e4b46d5487ebcdb935859f1d43746ab94e706f7c43b91b46d24ba",
     "bytes": 19214
   },
   "checks": [

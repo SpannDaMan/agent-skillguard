@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "candidate": "agent-skillguard 0.1.1",
-  "product_revision_sha256": "b1b36eaad69545e20a9330665cdc620a093528f05bc5584111af758201a721eb",
+  "product_revision_sha256": "bdde7ac80e84979e652504b24348ebc0a88e8a204ddd402cc6e23b7b055d3faf",
   "status": "pass",
   "validated_paths": [
     ".",
