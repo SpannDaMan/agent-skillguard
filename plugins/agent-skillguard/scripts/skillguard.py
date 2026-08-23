@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Agent SkillGuard: deterministic pre-install checks for agent artifacts."""
+"""Skill Risk Check: deterministic pre-install checks for agent artifacts."""
 
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 SCHEMA_VERSION = "1.0"
 EXIT_PASS = 0
 EXIT_FINDINGS = 1
@@ -322,7 +322,7 @@ def render_markdown(report: dict[str, Any]) -> str:
 
     summary = report["summary"]
     lines = [
-        "# Agent SkillGuard report",
+        "# Skill Risk Check report",
         "",
         f"> {report['claim_boundary']}",
         "",
@@ -398,7 +398,7 @@ def render_sarif(report: dict[str, Any], rules: list[Rule]) -> dict[str, Any]:
         "version": "2.1.0",
         "runs": [
             {
-                "tool": {"driver": {"name": "Agent SkillGuard", "version": VERSION, "rules": descriptors}},
+                "tool": {"driver": {"name": "Skill Risk Check", "version": VERSION, "rules": descriptors}},
                 "results": results,
                 "properties": {"scanDigestSha256": report["scan"]["scan_digest_sha256"]},
             }

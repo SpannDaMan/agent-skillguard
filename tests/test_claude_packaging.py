@@ -17,9 +17,9 @@ class ClaudePackagingTests(unittest.TestCase):
         plugin = json.loads((PLUGIN / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
         entry = marketplace["plugins"][0]
         self.assertEqual(marketplace["owner"]["name"], "Orbral")
-        self.assertEqual(entry["name"], "agent-skillguard")
+        self.assertEqual(entry["name"], "skill-risk-check")
         self.assertEqual(entry["source"], "./plugins/agent-skillguard")
-        self.assertEqual(entry["version"], "0.1.1")
+        self.assertEqual(entry["version"], "0.1.2")
         self.assertEqual(plugin["name"], entry["name"])
         self.assertEqual(plugin["version"], entry["version"])
         self.assertEqual(plugin["author"]["name"], "Orbral")

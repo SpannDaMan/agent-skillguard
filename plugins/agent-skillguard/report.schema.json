@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/SpannDaMan/agent-skillguard/blob/main/plugins/agent-skillguard/report.schema.json",
-  "title": "Agent SkillGuard report",
+  "title": "Skill Risk Check report",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "tool", "claim_boundary", "scan", "summary", "findings"],

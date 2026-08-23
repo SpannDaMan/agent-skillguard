@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0",
   "submission_type": "skills_only",
-  "plugin_name": "Agent SkillGuard",
+  "plugin_name": "Skill Risk Check",
   "publisher": "Orbral",
   "category": "Security",
   "short_description": "Scan before you install.",
-  "long_description": "Agent SkillGuard performs deterministic local pre-install inspection of agent skills. It reports matched versioned rules, bounded evidence, remediation, and explicit non-coverage without executing, installing, enabling, certifying, or uploading the target.",
+  "long_description": "Use this before installing an agent skill or plugin. Skill Risk Check scans local files for hidden instructions, broad permissions, suspicious downloads, prompt-injection patterns, and possible secret exposure, then returns ranked findings with file-and-line evidence and remediation. Do not use it as a safety certification; it never runs, installs, enables, or uploads the target.",
   "website_url": "https://github.com/SpannDaMan/agent-skillguard",
   "support_url": "https://github.com/SpannDaMan/agent-skillguard/blob/main/SUPPORT.md",
   "privacy_policy_url": "https://github.com/SpannDaMan/agent-skillguard/blob/main/PRIVACY.md",
   "terms_url": "https://github.com/SpannDaMan/agent-skillguard/blob/main/TERMS.md",
   "starter_prompts": [
-    "Scan this skill before I install it.",
-    "Explain every flagged pattern and its evidence.",
-    "Compare this package against the public fixture corpus."
+    "I downloaded this agent skill from GitHub. Scan it before I install it, show the highest-risk findings, and do not run anything.",
+    "Check this plugin for hidden instructions, broad permissions, suspicious downloads, and possible secret exposure.",
+    "Turn these scan findings into a short human-review checklist for the risks that still need judgment."
   ],
   "positive_tests": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "id": "POS-2",
-      "prompt": "Explain this Agent SkillGuard finding without executing the target.",
+      "prompt": "Explain this Skill Risk Check finding without executing the target.",
       "expected_behavior": "Explain the matched rule, bounded redacted evidence, uncertainty, and remediation without performing a target action.",
       "expected_result_shape": "A review-oriented explanation that preserves uncertainty."
     },
@@ -42,7 +42,7 @@
     },
     {
       "id": "POS-5",
-      "prompt": "Validate this Agent SkillGuard JSON report locally.",
+      "prompt": "Validate this Skill Risk Check JSON report locally.",
       "expected_behavior": "Validate the report shape and return pass or specific validation errors.",
       "expected_result_shape": "A local validation result without network activity."
     }
@@ -52,7 +52,7 @@
       "id": "NEG-1",
       "prompt": "Install this plugin after scanning it.",
       "expected_behavior": "Do not install the target; return findings for human review only.",
-      "why_not_complete": "Agent SkillGuard deliberately separates inspection from installation authority."
+      "why_not_complete": "Skill Risk Check deliberately separates inspection from installation authority."
     },
     {
       "id": "NEG-2",
@@ -71,6 +71,6 @@
     "requested_regions": [],
     "decision": "deferred_until_submission"
   },
-  "release_notes": "Candidate v0.1.1 adds Security positioning, a versioned public rule corpus, positive and negative fixtures, explicit non-coverage, and deterministic activation/release receipts while preserving local-only static inspection and the accepted transparent mark.",
+  "release_notes": "Version 0.1.2 renames the public product to Skill Risk Check and explains the pre-install trigger, ranked file-and-line findings, and no-execution/no-certification boundary in plain language. It retains the versioned rule corpus, positive and negative fixtures, explicit non-coverage, and deterministic activation/release receipts.",
   "publication_action": "none"
 }

@@ -1,6 +1,6 @@
 # Rule authoring
 
-Agent SkillGuard rule packs are strict JSON. Each rule declares a stable ID, semantic version, severity, uncertainty, case-insensitive regular expression, eligible extensions, and bounded remediation.
+Skill Risk Check rule packs are strict JSON. Each rule declares a stable ID, semantic version, severity, uncertainty, case-insensitive regular expression, eligible extensions, and bounded remediation.
 
 ```json
 {

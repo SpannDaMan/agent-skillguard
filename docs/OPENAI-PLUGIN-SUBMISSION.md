@@ -1,6 +1,6 @@
 # OpenAI Plugin Submission Packet
 
-Agent SkillGuard is prepared as a skills-only plugin with a local CLI. It has no MCP server, UI, authentication, credentials, network access, telemetry, hosted data storage, target execution, target installation, target enablement, or target upload.
+Skill Risk Check is prepared as a skills-only plugin with a local CLI. It has no MCP server, UI, authentication, credentials, network access, telemetry, hosted data storage, target execution, target installation, target enablement, or target upload.
 
 ## Local package
 

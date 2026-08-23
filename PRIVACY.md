@@ -1,6 +1,6 @@
 # Privacy
 
-Agent SkillGuard is a local, skills-only plugin and dependency-free command-line tool.
+Skill Risk Check is a local, skills-only plugin and dependency-free command-line tool.
 
 ## Data handling
 
@@ -13,7 +13,7 @@ Reports may contain bounded redacted evidence from the scanned artifact. Keep re
 
 ## Host products
 
-When Agent SkillGuard is installed through Codex, Claude Code, GitHub, or another host, that host's own privacy terms and telemetry settings still apply. Agent SkillGuard does not control or expand them.
+When Skill Risk Check is installed through Codex, Claude Code, GitHub, or another host, that host's own privacy terms and telemetry settings still apply. Skill Risk Check does not control or expand them.
 
 ## Contact
 

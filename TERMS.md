@@ -1,6 +1,6 @@
 # Terms
 
-Agent SkillGuard is open-source software licensed under the [MIT License](LICENSE).
+Skill Risk Check is open-source software licensed under the [MIT License](LICENSE).
 
 ## No hosted service
 

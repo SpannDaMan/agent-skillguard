@@ -1,8 +1,8 @@
-# Agent SkillGuard
+# Skill Risk Check
 
 Scan before you install.
 
-Agent SkillGuard performs deterministic local pre-install inspection across agent skills and plugins. It reports versioned rule matches, bounded evidence, remediation, and explicit non-coverage without pretending to certify safety.
+Use Skill Risk Check before installing an agent skill or plugin. It scans local files for hidden instructions, broad permissions, suspicious downloads, prompt-injection patterns, and possible secret exposure, then returns ranked findings with file-and-line evidence and remediation. It never runs, installs, enables, or uploads the target, and a clean scan is not a safety certification.
 
 Findings are reviewable **potential policy violations**, not verdicts about author intent or artifact safety.
 
@@ -116,6 +116,6 @@ The repository is structured as a skills-only Codex plugin marketplace with one 
 
 ## Status
 
-`v0.1.1` is the current private candidate. A frozen-candidate full gate, fresh rule-corpus receipt, and activation receipt remain required before any release claim. See [PUBLICATION-GATE.md](PUBLICATION-GATE.md), [release evidence](docs/RELEASE-EVIDENCE.md), and [receipts](docs/RECEIPTS.md).
+`v0.1.2` is the current public candidate. It preserves the stable `agent-skillguard` package slug while renaming the public product to Skill Risk Check and tightening provider metadata around the pre-install scan, ranked evidence, remediation result, and no-execution/no-certification boundary. A frozen-candidate full gate, fresh rule-corpus receipt, and activation receipt remain required before release. See [PUBLICATION-GATE.md](PUBLICATION-GATE.md), [release evidence](docs/RELEASE-EVIDENCE.md), and [receipts](docs/RECEIPTS.md).
 
 MIT licensed. Developed by Orbral.

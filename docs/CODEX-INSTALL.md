@@ -1,6 +1,6 @@
 # Install In Codex
 
-Agent SkillGuard is a skills-only Codex plugin with a local CLI. It does not install an MCP server, request credentials, make network calls, execute the target, install the target, enable the target, or upload the target.
+Skill Risk Check is a skills-only Codex plugin with a local CLI. It does not install an MCP server, request credentials, make network calls, execute the target, install the target, enable the target, or upload the target.
 
 Validate a local checkout:
 

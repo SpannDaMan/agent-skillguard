@@ -1,6 +1,6 @@
 # Install In Claude Code
 
-Agent SkillGuard ships as a skills-only Claude Code plugin with a local CLI. It does not install an MCP server, request credentials, make network calls, execute the target, install the target, enable the target, or upload the target.
+Skill Risk Check ships as a skills-only Claude Code plugin with a local CLI. It does not install an MCP server, request credentials, make network calls, execute the target, install the target, enable the target, or upload the target.
 
 After the repository is public:
 

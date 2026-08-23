@@ -140,7 +140,7 @@ def validate_metadata() -> list[str]:
     except (OSError, json.JSONDecodeError) as exc:
         return [f"metadata JSON failed: {exc}"]
     interface = codex.get("interface", {})
-    if codex.get("name") != "agent-skillguard" or codex.get("version") != "0.1.1" or codex.get("license") != "MIT":
+    if codex.get("name") != "agent-skillguard" or codex.get("version") != "0.1.2" or codex.get("license") != "MIT":
         errors.append("Codex plugin identity or version mismatch")
     if codex.get("repository") != "https://github.com/SpannDaMan/agent-skillguard":
         errors.append("Codex plugin repository mismatch")
@@ -152,22 +152,24 @@ def validate_metadata() -> list[str]:
         errors.append("Codex privacy or terms URL mismatch")
     if codex.get("mcpServers") or codex.get("mcp"):
         errors.append("Codex manifest must remain skills-only with no MCP declaration")
+    if "screenshots" in interface:
+        errors.append("skills-only plugin must not declare interface.screenshots")
     expected_prompts = [
-        "Scan this skill before I install it.",
-        "Explain every flagged pattern and its evidence.",
-        "Compare this package against the public fixture corpus.",
+        "I downloaded this agent skill from GitHub. Scan it before I install it, show the highest-risk findings, and do not run anything.",
+        "Check this plugin for hidden instructions, broad permissions, suspicious downloads, and possible secret exposure.",
+        "Turn these scan findings into a short human-review checklist for the risks that still need judgment.",
     ]
     if interface.get("defaultPrompt") != expected_prompts:
         errors.append("Codex starter prompts mismatch")
     entry = local_market.get("plugins", [{}])[0]
     if local_market.get("owner", {}).get("name") != "Orbral" or entry.get("source") != "./plugins/agent-skillguard":
         errors.append("local marketplace identity or source mismatch")
-    if entry.get("version") != "0.1.1" or entry.get("category") != "Security" or entry.get("policy") != {"installation": "AVAILABLE", "authentication": "ON_INSTALL"}:
+    if entry.get("version") != "0.1.2" or entry.get("category") != "Security" or entry.get("policy") != {"installation": "AVAILABLE", "authentication": "ON_INSTALL"}:
         errors.append("local marketplace policy mismatch")
     claude_entry = claude_market.get("plugins", [{}])[0]
-    if claude_market.get("owner", {}).get("name") != "Orbral" or claude_entry.get("name") != "agent-skillguard" or claude_entry.get("source") != "./plugins/agent-skillguard" or claude_entry.get("version") != "0.1.1":
+    if claude_market.get("owner", {}).get("name") != "Orbral" or claude_entry.get("name") != "skill-risk-check" or claude_entry.get("source") != "./plugins/agent-skillguard" or claude_entry.get("version") != "0.1.2":
         errors.append("Claude marketplace metadata mismatch")
-    if claude.get("name") != "agent-skillguard" or claude.get("version") != "0.1.1" or claude.get("author", {}).get("name") != "Orbral":
+    if claude.get("name") != "skill-risk-check" or claude.get("version") != "0.1.2" or claude.get("author", {}).get("name") != "Orbral":
         errors.append("Claude plugin identity mismatch")
     if submission.get("submission_type") != "skills_only" or submission.get("publisher") != "Orbral" or submission.get("category") != "Security":
         errors.append("OpenAI submission identity mismatch")
@@ -403,7 +405,7 @@ def run_validation(*, targeted: bool = False) -> dict[str, Any]:
     return {
         "status": "pass" if not errors else "fail",
         "mode": "targeted" if targeted else "frozen_candidate_full_gate",
-        "candidate": "agent-skillguard 0.1.1",
+        "candidate": "agent-skillguard 0.1.2",
         "product_revision_sha256": current_revision(),
         "checks": {name: "pass" if not group else "fail" for name, group in checks.items()},
         "publication_action": "none",
@@ -420,9 +422,9 @@ def main() -> int:
     if args.json:
         print(json.dumps(result, indent=2))
     elif result["status"] == "pass":
-        print(f"PASS: Agent SkillGuard {result['mode']}")
+        print(f"PASS: Skill Risk Check {result['mode']}")
     else:
-        print(f"FAIL: Agent SkillGuard {result['mode']}", file=sys.stderr)
+        print(f"FAIL: Skill Risk Check {result['mode']}", file=sys.stderr)
         for error in result["errors"]:
             print(f"- {error}", file=sys.stderr)
     return 0 if result["status"] == "pass" else 1

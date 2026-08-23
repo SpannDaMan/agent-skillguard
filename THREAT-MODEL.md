@@ -6,7 +6,7 @@ Give a maintainer a deterministic, inspectable signal before an agent skill or p
 
 ## Trust boundary
 
-The target directory is untrusted data. Agent SkillGuard reads eligible bounded UTF-8 files but never imports, executes, sources, installs, enables, or uploads them. Symlinks are not followed. Common dependency and generated directories are excluded. An eligible file that is oversized, contains binary NUL bytes, or is not valid UTF-8 makes the scan fail with tool-error exit `2`; it cannot silently produce a clean result.
+The target directory is untrusted data. Skill Risk Check reads eligible bounded UTF-8 files but never imports, executes, sources, installs, enables, or uploads them. Symlinks are not followed. Common dependency and generated directories are excluded. An eligible file that is oversized, contains binary NUL bytes, or is not valid UTF-8 makes the scan fail with tool-error exit `2`; it cannot silently produce a clean result.
 
 ## Covered risks
 

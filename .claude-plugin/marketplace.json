@@ -1,16 +1,18 @@
 {
   "name": "agent-skillguard",
-  "description": "A focused marketplace for the Agent SkillGuard skills-only plugin.",
+  "description": "The official Orbral marketplace for Skill Risk Check.",
   "owner": {
     "name": "Orbral"
   },
   "plugins": [
     {
-      "name": "agent-skillguard",
+      "name": "skill-risk-check",
       "source": "./plugins/agent-skillguard",
-      "description": "Scan agent skills locally for reviewable risk patterns before installation.",
-      "version": "0.1.1",
-      "category": "security"
+      "description": "Use before installing an agent skill or plugin; scan local files for risky instructions, permissions, downloads, and possible secret exposure without running the target.",
+      "version": "0.1.2",
+      "category": "security",
+      "keywords": ["plugin security", "agent skills", "pre-install scan", "prompt injection", "supply chain"],
+      "tags": ["security", "plugins", "local", "sarif"]
     }
   ]
 }

@@ -1,10 +1,10 @@
-# Agent SkillGuard design contract
+# Skill Risk Check design contract
 
 Status: public-package visual authority
 
 ## Product idea
 
-Agent SkillGuard is a quiet checkpoint, not a police badge. The visual system should feel exact, local, and calm: an electric-cyan scan signal passing through a deep-navy and signal-blue inspection frame that survives both light and dark repository surfaces.
+Skill Risk Check is a quiet checkpoint, not a police badge. The visual system should feel exact, local, and calm: an electric-cyan scan signal passing through a deep-navy and signal-blue inspection frame that survives both light and dark repository surfaces.
 
 ## Mark
 

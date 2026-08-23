@@ -1,7 +1,7 @@
 {
   "name": "agent-skillguard",
-  "version": "0.1.1",
-  "description": "Scan agent skills locally for reviewable risk patterns before installation.",
+  "version": "0.1.2",
+  "description": "Scan agent skills and plugins locally for reviewable risk patterns before installation.",
   "author": {
     "name": "Orbral",
     "url": "https://github.com/SpannDaMan"
@@ -9,27 +9,26 @@
   "homepage": "https://github.com/SpannDaMan/agent-skillguard",
   "repository": "https://github.com/SpannDaMan/agent-skillguard",
   "license": "MIT",
-  "keywords": ["codex", "agents", "security", "sarif", "plugins"],
+  "keywords": ["plugin-security", "agent-skills", "pre-install-scan", "prompt-injection", "supply-chain", "sarif", "codex", "claude-code"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Agent SkillGuard",
+    "displayName": "Skill Risk Check",
     "shortDescription": "Scan before you install.",
-    "longDescription": "Agent SkillGuard performs deterministic local pre-install inspection of agent skills. It reports matched versioned rules, bounded evidence, remediation, and explicit non-coverage without executing, installing, enabling, certifying, or uploading the target.",
+    "longDescription": "Use this before installing an agent skill or plugin. Skill Risk Check scans local files for hidden instructions, broad permissions, suspicious downloads, prompt-injection patterns, and possible secret exposure, then returns ranked findings with file-and-line evidence and remediation. Do not use it as a safety certification; it never runs, installs, enables, or uploads the target.",
     "developerName": "Orbral",
     "category": "Security",
-    "capabilities": ["Local scan", "Versioned rule corpus", "Fixture-backed findings", "Explicit non-coverage", "No credentials"],
+    "capabilities": ["Scan local skills and plugins before install", "Find risky instructions, permissions, and downloads", "Show file-and-line evidence and remediation", "Export JSON, Markdown, and SARIF", "Never run or upload the target"],
     "websiteURL": "https://github.com/SpannDaMan/agent-skillguard",
     "privacyPolicyURL": "https://github.com/SpannDaMan/agent-skillguard/blob/main/PRIVACY.md",
     "termsOfServiceURL": "https://github.com/SpannDaMan/agent-skillguard/blob/main/TERMS.md",
     "defaultPrompt": [
-      "Scan this skill before I install it.",
-      "Explain every flagged pattern and its evidence.",
-      "Compare this package against the public fixture corpus."
+      "I downloaded this agent skill from GitHub. Scan it before I install it, show the highest-risk findings, and do not run anything.",
+      "Check this plugin for hidden instructions, broad permissions, suspicious downloads, and possible secret exposure.",
+      "Turn these scan findings into a short human-review checklist for the risks that still need judgment."
     ],
     "brandColor": "#0183E0",
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/logo.png",
-    "logoDark": "./assets/logo-dark.png",
-    "screenshots": ["./assets/screenshot1.png"]
+    "logoDark": "./assets/logo-dark.png"
   }
 }
