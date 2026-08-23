@@ -1,15 +1,16 @@
 {
   "name": "agent-skillguard",
+  "interface": {"displayName": "Skill Risk Check"},
   "owner": {"name": "Orbral"},
   "metadata": {
-    "description": "Codex-first pre-install checks for agent skills and plugins"
+    "description": "Scan agent skills and plugins before installation"
   },
   "plugins": [
     {
       "name": "agent-skillguard",
       "source": "./plugins/agent-skillguard",
-      "description": "Scan an agent artifact locally and review potential-risk findings before installation.",
-      "version": "0.1.1",
+      "description": "Scan an agent skill or plugin locally and review potential-risk findings before installation.",
+      "version": "0.1.2",
       "category": "Security",
       "policy": {
         "installation": "AVAILABLE",

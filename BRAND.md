@@ -2,7 +2,7 @@
 
 ## Name
 
-Use **Agent SkillGuard** in prose and `agent-skillguard` for the package, plugin, CLI project, and proposed repository. The executable is `skillguard`.
+Use **Skill Risk Check** as the public display name. Keep `agent-skillguard` as the stable package, plugin, CLI project, repository slug, and compatibility identifier; the executable remains `skillguard`. Legacy image and evidence filenames retain “Agent SkillGuard” for source custody.
 
 ## One-line promise
 

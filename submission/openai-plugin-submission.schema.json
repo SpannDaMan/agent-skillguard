@@ -7,7 +7,7 @@
   "properties": {
     "schema_version": {"type": "string", "const": "1.0"},
     "submission_type": {"type": "string", "const": "skills_only"},
-    "plugin_name": {"type": "string", "const": "Agent SkillGuard"},
+    "plugin_name": {"type": "string", "const": "Skill Risk Check"},
     "publisher": {"type": "string", "const": "Orbral"},
     "category": {"type": "string", "const": "Security"},
     "short_description": {"type": "string", "const": "Scan before you install."},

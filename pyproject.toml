@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agent-skillguard"
-version = "0.1.1"
-description = "Scan agent skills locally for reviewable risk patterns before installation"
+version = "0.1.2"
+description = "Scan agent skills and plugins locally for reviewable risk patterns before installation"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}
 authors = [{name = "Orbral"}]
-keywords = ["codex", "agents", "security", "sarif", "plugins"]
+keywords = ["plugin-security", "agent-skills", "pre-install-scan", "prompt-injection", "supply-chain", "sarif", "codex", "claude-code"]
 dependencies = []
 
 [project.urls]

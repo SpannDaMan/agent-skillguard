@@ -1,6 +1,6 @@
 # Provenance
 
-Agent SkillGuard is a clean-room public-safe extraction of general pre-install review patterns developed from first-party operational experience and primary public repository research. It does not vendor third-party code, rule packs, prompts, datasets, credentials, private paths, private records, or internal operating doctrine.
+Skill Risk Check is a clean-room public-safe extraction of general pre-install review patterns developed from first-party operational experience and primary public repository research. It does not vendor third-party code, rule packs, prompts, datasets, credentials, private paths, private records, or internal operating doctrine.
 
 The Python implementation and project copy are original for this candidate. SARIF compatibility follows the public SARIF 2.1.0 interchange shape; the project does not claim certification by a standards body.
 

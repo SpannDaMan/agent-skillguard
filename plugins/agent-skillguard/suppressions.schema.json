@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/SpannDaMan/agent-skillguard/blob/main/plugins/agent-skillguard/suppressions.schema.json",
-  "title": "Agent SkillGuard reviewed suppressions",
+  "title": "Skill Risk Check reviewed suppressions",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "suppressions"],

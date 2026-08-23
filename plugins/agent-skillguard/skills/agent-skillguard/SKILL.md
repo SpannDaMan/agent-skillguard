@@ -1,9 +1,9 @@
 ---
 name: agent-skillguard
-description: Scan an agent skill or plugin before installation with a deterministic local Versioned Rule Corpus, explain bounded potential-risk findings, and state explicit non-coverage without certifying safety.
+description: Use before installing an agent skill or plugin. Scan local files for risky instructions, broad permissions, suspicious downloads, prompt-injection patterns, and possible secret exposure; return file-and-line findings and remediation without running, uploading, or certifying the target.
 ---
 
-# Agent SkillGuard
+# Skill Risk Check
 
 Use this skill when the user asks whether an agent skill or plugin should be trusted, installed, reviewed, or admitted.
 

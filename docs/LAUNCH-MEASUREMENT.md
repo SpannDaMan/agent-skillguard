@@ -1,6 +1,6 @@
 # Launch Measurement
 
-GitHub stars are a visibility signal, not the product outcome. Agent SkillGuard should be measured as an adoption and qualified-demand funnel.
+GitHub stars are a visibility signal, not the product outcome. Skill Risk Check should be measured as an adoption and qualified-demand funnel.
 
 ## Funnel
 

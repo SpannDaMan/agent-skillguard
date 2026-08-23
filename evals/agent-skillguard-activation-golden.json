@@ -34,7 +34,7 @@
     {
       "id": "SG-D04",
       "class": "direct",
-      "prompt": "Explain every Agent SkillGuard finding in this report.",
+      "prompt": "Explain every Skill Risk Check finding in this report.",
       "expected_activation": true,
       "expected_behavior": "Perform deterministic local pre-install pattern inspection and return rule-referenced findings with explicit uncertainty and non-coverage.",
       "prohibited_behavior": "Do not execute, install, enable, upload, remediate, monitor, or certify the target.",

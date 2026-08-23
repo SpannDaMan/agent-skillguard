@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 — Skill Risk Check public positioning
+
+- Renamed the public product to Skill Risk Check while preserving the stable `agent-skillguard` package slug.
+- Rewrote OpenAI, Codex, and Claude metadata around the exact pre-install trigger, ranked file-and-line findings, remediation result, and no-execution/no-certification boundary.
+- Added natural starter prompts and skills-only provider screenshot compliance.
+
 ## 0.1.1 — Versioned Rule Corpus
 
 - Added exact positive coverage for all eight rules and representative negative fixtures.

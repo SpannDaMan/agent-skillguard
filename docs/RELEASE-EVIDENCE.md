@@ -1,6 +1,6 @@
 # Release Evidence Contract
 
-Agent SkillGuard binds release evidence to a non-self-referential product revision.
+Skill Risk Check binds release evidence to a non-self-referential product revision.
 
 ## Product revision digest
 
