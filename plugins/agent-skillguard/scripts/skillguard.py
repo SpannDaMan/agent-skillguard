@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
-VERSION = "0.1.2"
+VERSION = "0.1.3"
 SCHEMA_VERSION = "1.0"
 EXIT_PASS = 0
 EXIT_FINDINGS = 1

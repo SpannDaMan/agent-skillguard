@@ -116,6 +116,6 @@ The repository is structured as a skills-only Codex plugin marketplace with one 
 
 ## Status
 
-`v0.1.2` is the current public candidate. It preserves the stable `agent-skillguard` package slug while renaming the public product to Skill Risk Check and tightening provider metadata around the pre-install scan, ranked evidence, remediation result, and no-execution/no-certification boundary. A frozen-candidate full gate, fresh rule-corpus receipt, and activation receipt remain required before release. See [PUBLICATION-GATE.md](PUBLICATION-GATE.md), [release evidence](docs/RELEASE-EVIDENCE.md), and [receipts](docs/RECEIPTS.md).
+`v0.1.3` is the current public candidate. It preserves the stable `agent-skillguard` package slug while renaming the public product to Skill Risk Check and tightening provider metadata around the pre-install scan, ranked evidence, remediation result, and no-execution/no-certification boundary. A frozen-candidate full gate, fresh rule-corpus receipt, and activation receipt remain required before release. See [PUBLICATION-GATE.md](PUBLICATION-GATE.md), [release evidence](docs/RELEASE-EVIDENCE.md), and [receipts](docs/RECEIPTS.md).
 
 MIT licensed. Developed by Orbral.

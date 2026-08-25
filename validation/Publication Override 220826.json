@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "candidate": "agent-skillguard 0.1.2",
-  "product_revision_sha256": "56c3a72e25d3b0e180b158fb7d18c843b18c0220a5f4a0c85f8d15fbe50f6104",
+  "candidate": "agent-skillguard 0.1.3",
+  "product_revision_sha256": "7d279a79692be20d0b14284dfd99de2129c89ba42fedb6350a9f9cedde5cab8e",
   "status": "scoped_override_recorded",
   "scope": "Agent SkillGuard public-package preparation and root-owned publication only",
   "private_pilot_started": false,
