@@ -11,9 +11,9 @@
   "privacy_policy_url": "https://github.com/SpannDaMan/agent-skillguard/blob/main/PRIVACY.md",
   "terms_url": "https://github.com/SpannDaMan/agent-skillguard/blob/main/TERMS.md",
   "starter_prompts": [
-    "@Skill Risk Check I found a viral skill repo on Twitter. Before I install it, audit the public repo and flag anything unsafe.",
-    "@Skill Risk Check Audit this plugin's scripts, permissions, and external calls. Rank risks with file-and-line evidence.",
-    "@Skill Risk Check Give me a go-or-no-go. List what blocks installation, what must be fixed, and what I still need to review."
+    "I found a viral skill repo on Twitter. Before I install it, audit the public repo and flag anything unsafe.",
+    "Audit this plugin's scripts, permissions, and external calls. Rank risks with file-and-line evidence.",
+    "Give me a go-or-no-go. List what blocks installation, what must be fixed, and what I still need to review."
   ],
   "positive_tests": [
     {
@@ -71,6 +71,6 @@
     "requested_regions": [],
     "decision": "deferred_until_submission"
   },
-  "release_notes": "Version 0.1.4 adds operator-approved proactive repo-audit examples and the locked full-bleed Silver Satin logo family while preserving the pre-install trigger, ranked file-and-line findings, local-only behavior, and no-execution/no-certification boundary.",
+  "release_notes": "Version 0.1.5 adds operator-approved proactive repo-audit examples and the locked full-bleed Silver Satin logo family while preserving the pre-install trigger, ranked file-and-line findings, local-only behavior, and no-execution/no-certification boundary.",
   "publication_action": "none"
 }
