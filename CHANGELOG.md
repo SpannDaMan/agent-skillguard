@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 — proactive audit examples and Silver Satin identity
+
+- Added the operator-approved viral-repo, agent-stack review, and go-or-no-go starter prompts.
+- Promoted the exact Skill Risk Check mark over the locked full-bleed Silver Satin marketplace background.
+- Preserved deterministic local inspection and the no-run, no-install, no-certification boundary.
+
 ## 0.1.2 — Skill Risk Check public positioning
 
 - Renamed the public product to Skill Risk Check while preserving the stable `agent-skillguard` package slug.

@@ -34,6 +34,8 @@ REQUIRED_FILES = (
     "docs/RELEASE-EVIDENCE.md", "docs/LAUNCH-MEASUREMENT.md", "submission/openai-plugin-submission.json",
     "submission/openai-plugin-submission.schema.json", "plugins/agent-skillguard/.codex-plugin/plugin.json",
     "plugins/agent-skillguard/.claude-plugin/plugin.json", "plugins/agent-skillguard/assets/Agent SkillGuard Transparent Master 220826.png",
+    "plugins/agent-skillguard/assets/Skill Risk Check Silver Satin Master 240826.png",
+    "plugins/agent-skillguard/assets/Silver Satin Background Master 240826.png",
     "plugins/agent-skillguard/assets/Agent SkillGuard Agent Smith Palette Source Receipt 210826.md",
     "plugins/agent-skillguard/assets/Logo Generation Manifest 140826.json", "plugins/agent-skillguard/assets/icon.png",
     "plugins/agent-skillguard/assets/logo.png", "plugins/agent-skillguard/assets/logo-dark.png",
@@ -58,9 +60,11 @@ SECRET_PATTERNS = (
 ABSOLUTE_PATHS = (re.compile(r"[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s]+", re.I), re.compile(r"/(?:Users|home)/[^/\s]+/"))
 EXPECTED_PNGS = {
     "plugins/agent-skillguard/assets/Agent SkillGuard Transparent Master 220826.png": (1254, 1254, True),
-    "plugins/agent-skillguard/assets/icon.png": (512, 512, True),
-    "plugins/agent-skillguard/assets/logo.png": (1024, 1024, True),
-    "plugins/agent-skillguard/assets/logo-dark.png": (1024, 1024, True),
+    "plugins/agent-skillguard/assets/Skill Risk Check Silver Satin Master 240826.png": (1254, 1254, False),
+    "plugins/agent-skillguard/assets/Silver Satin Background Master 240826.png": (1254, 1254, False),
+    "plugins/agent-skillguard/assets/icon.png": (512, 512, False),
+    "plugins/agent-skillguard/assets/logo.png": (1024, 1024, False),
+    "plugins/agent-skillguard/assets/logo-dark.png": (1024, 1024, False),
     "plugins/agent-skillguard/assets/screenshot1.png": (1600, 900, False),
     "plugins/agent-skillguard/assets/social-preview.png": (1600, 900, False),
 }
@@ -140,7 +144,7 @@ def validate_metadata() -> list[str]:
     except (OSError, json.JSONDecodeError) as exc:
         return [f"metadata JSON failed: {exc}"]
     interface = codex.get("interface", {})
-    if codex.get("name") != "agent-skillguard" or codex.get("version") != "0.1.2" or codex.get("license") != "MIT":
+    if codex.get("name") != "agent-skillguard" or codex.get("version") != "0.1.3" or codex.get("license") != "MIT":
         errors.append("Codex plugin identity or version mismatch")
     if codex.get("repository") != "https://github.com/SpannDaMan/agent-skillguard":
         errors.append("Codex plugin repository mismatch")
@@ -155,21 +159,21 @@ def validate_metadata() -> list[str]:
     if "screenshots" in interface:
         errors.append("skills-only plugin must not declare interface.screenshots")
     expected_prompts = [
-        "I downloaded this agent skill from GitHub. Scan it before I install it, show the highest-risk findings, and do not run anything.",
-        "Check this plugin for hidden instructions, broad permissions, suspicious downloads, and possible secret exposure.",
-        "Turn these scan findings into a short human-review checklist for the risks that still need judgment.",
+        "I just found this agent-skill repo on Twitter and it’s going viral. Before I download or install it, audit the public repo for hidden instructions, suspicious scripts or downloads, broad permissions, and possible secret exposure. Show me the highest-risk findings with file-and-line evidence, and do not run anything.",
+        "I’m considering adding this plugin to our agent stack. Review its instructions, scripts, permissions, and external calls, then give me a ranked risk report showing the exact files and lines I need to inspect before approval.",
+        "Give me a simple go-or-no-go recommendation for this skill. List anything that would block installation, what should be fixed first, and what I still need to review before approving it.",
     ]
     if interface.get("defaultPrompt") != expected_prompts:
         errors.append("Codex starter prompts mismatch")
     entry = local_market.get("plugins", [{}])[0]
     if local_market.get("owner", {}).get("name") != "Orbral" or entry.get("source") != "./plugins/agent-skillguard":
         errors.append("local marketplace identity or source mismatch")
-    if entry.get("version") != "0.1.2" or entry.get("category") != "Security" or entry.get("policy") != {"installation": "AVAILABLE", "authentication": "ON_INSTALL"}:
+    if entry.get("version") != "0.1.3" or entry.get("category") != "Security" or entry.get("policy") != {"installation": "AVAILABLE", "authentication": "ON_INSTALL"}:
         errors.append("local marketplace policy mismatch")
     claude_entry = claude_market.get("plugins", [{}])[0]
-    if claude_market.get("owner", {}).get("name") != "Orbral" or claude_entry.get("name") != "skill-risk-check" or claude_entry.get("source") != "./plugins/agent-skillguard" or claude_entry.get("version") != "0.1.2":
+    if claude_market.get("owner", {}).get("name") != "Orbral" or claude_entry.get("name") != "skill-risk-check" or claude_entry.get("source") != "./plugins/agent-skillguard" or claude_entry.get("version") != "0.1.3":
         errors.append("Claude marketplace metadata mismatch")
-    if claude.get("name") != "skill-risk-check" or claude.get("version") != "0.1.2" or claude.get("author", {}).get("name") != "Orbral":
+    if claude.get("name") != "skill-risk-check" or claude.get("version") != "0.1.3" or claude.get("author", {}).get("name") != "Orbral":
         errors.append("Claude plugin identity mismatch")
     if submission.get("submission_type") != "skills_only" or submission.get("publisher") != "Orbral" or submission.get("category") != "Security":
         errors.append("OpenAI submission identity mismatch")
@@ -285,23 +289,25 @@ def validate_logo_provenance() -> list[str]:
     except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
         return [f"logo provenance failed: {exc}"]
     errors: list[str] = []
-    expected = "plugins/agent-skillguard/assets/Agent SkillGuard Transparent Master 220826.png"
+    expected = "plugins/agent-skillguard/assets/Skill Risk Check Silver Satin Master 240826.png"
     master = ROOT / expected
-    if manifest.get("canonical_master") != expected or manifest.get("source_type") != "deterministic_transparent_derivative" or manifest.get("source_background_policy") != "transparent_source":
-        errors.append("transparent logo manifest identity mismatch")
-    if manifest.get("master_sha256") != "b67972d299813960e9331089788086c1beed435a9fbe5dcf5e3c1894810248d3" or manifest.get("opaque_parent_sha256") != "bd1dbefb2f149aae5c9cc77eb5a9782aa99452693cd62816a5fc32adb5d55970":
-        errors.append("transparent logo manifest hash custody mismatch")
+    if manifest.get("canonical_master") != expected or manifest.get("source_type") != "deterministic_exact_mark_composite" or manifest.get("source_background_policy") != "opaque full-bleed silver satin":
+        errors.append("Silver Satin logo manifest identity mismatch")
+    if manifest.get("master_sha256") != "1293e1eb7960cf5ed12dc674868bad1c3afad0794e80453990a99bded7fa5180":
+        errors.append("Silver Satin logo manifest master hash custody mismatch")
+    if manifest.get("mark_source_sha256") != "b67972d299813960e9331089788086c1beed435a9fbe5dcf5e3c1894810248d3" or manifest.get("shared_background_sha256") != "5ef688ba56bd8e8b185903df3a73262400859f0bb0791009b437f5d13ff8a579":
+        errors.append("Silver Satin logo manifest source custody mismatch")
     if master.is_file() and hashlib.sha256(master.read_bytes()).hexdigest() != manifest.get("master_sha256"):
-        errors.append("transparent master hash does not match manifest")
+        errors.append("Silver Satin master hash does not match manifest")
     for required in ("accepted derivative, not an asserted unedited original", "Opaque parent SHA-256", "transparent master"):
         if required.casefold() not in source_receipt.casefold():
             errors.append(f"source receipt missing required custody statement: {required}")
     for forbidden in ("chat_url", "container_service", "conversation_url", "browser_content_id", "AI Agents"):
         if forbidden.casefold() in json.dumps(manifest).casefold() or forbidden.casefold() in source_receipt.casefold():
             errors.append(f"private provenance detail remains public: {forbidden}")
-    for required in ("transparent_source", "New-Canvas 512 512 'transparent'", "accepted_transparent_master_only"):
+    for required in ("deterministic_exact_mark_composite", "opaque full-bleed silver satin", "mark_source_sha256", "shared_background_sha256", "none_verify_only"):
         if required not in renderer:
-            errors.append(f"brand renderer missing transparent-source control: {required}")
+            errors.append(f"brand verifier missing Silver Satin custody control: {required}")
     return errors
 
 
@@ -405,7 +411,7 @@ def run_validation(*, targeted: bool = False) -> dict[str, Any]:
     return {
         "status": "pass" if not errors else "fail",
         "mode": "targeted" if targeted else "frozen_candidate_full_gate",
-        "candidate": "agent-skillguard 0.1.2",
+        "candidate": "agent-skillguard 0.1.3",
         "product_revision_sha256": current_revision(),
         "checks": {name: "pass" if not group else "fail" for name, group in checks.items()},
         "publication_action": "none",

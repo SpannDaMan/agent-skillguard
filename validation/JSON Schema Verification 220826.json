@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "candidate": "agent-skillguard 0.1.2",
-  "product_revision_sha256": "56c3a72e25d3b0e180b158fb7d18c843b18c0220a5f4a0c85f8d15fbe50f6104",
+  "candidate": "agent-skillguard 0.1.3",
+  "product_revision_sha256": "7d279a79692be20d0b14284dfd99de2129c89ba42fedb6350a9f9cedde5cab8e",
   "status": "pass",
   "command": [
     "python",
@@ -15,7 +15,7 @@
   "exit_code": 0,
   "validator_sha256": "7373319a0243f5c59241f719627dd26e0153edf99e614ac58154ddb4b3b30c39",
   "schema_sha256": "396243a04e53b96411cc53448915a45f91e4ee021688585a65d077713b683f03",
-  "instance_sha256": "ec92d5d57d07f020760c4cd4f01c72911e9be5e86062b8d5d914e3beeff4a7de",
+  "instance_sha256": "48f88edda7fc4c5d0a244ed3c84276e8ed4ffa164508f4ff91db344af8a6cfef",
   "evidence_boundary": "Local schema validation only; not provider acceptance.",
   "publication_action": "none"
 }
