@@ -19,7 +19,7 @@ class ClaudePackagingTests(unittest.TestCase):
         self.assertEqual(marketplace["owner"]["name"], "Orbral")
         self.assertEqual(entry["name"], "skill-risk-check")
         self.assertEqual(entry["source"], "./plugins/agent-skillguard")
-        self.assertEqual(entry["version"], "0.1.4")
+        self.assertEqual(entry["version"], "0.1.5")
         self.assertEqual(plugin["name"], entry["name"])
         self.assertEqual(plugin["version"], entry["version"])
         self.assertEqual(plugin["author"]["name"], "Orbral")

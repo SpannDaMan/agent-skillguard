@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "product": "Skill Risk Check",
-  "release_version": "0.1.4",
+  "release_version": "0.1.5",
   "selected_direction": "Silver Satin full-bleed",
   "canonical_master": "plugins/agent-skillguard/assets/Skill Risk Check Silver Satin Master 240826.png",
   "master_sha256": "1293e1eb7960cf5ed12dc674868bad1c3afad0794e80453990a99bded7fa5180",

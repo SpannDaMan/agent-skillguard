@@ -1,6 +1,6 @@
 {
   "name": "agent-skillguard",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Scan agent skills and plugins locally for reviewable risk patterns before installation.",
   "author": {
     "name": "Orbral",
@@ -22,9 +22,9 @@
     "privacyPolicyURL": "https://github.com/SpannDaMan/agent-skillguard/blob/main/PRIVACY.md",
     "termsOfServiceURL": "https://github.com/SpannDaMan/agent-skillguard/blob/main/TERMS.md",
     "defaultPrompt": [
-      "@Skill Risk Check I found a viral skill repo on Twitter. Before I install it, audit the public repo and flag anything unsafe.",
-      "@Skill Risk Check Audit this plugin's scripts, permissions, and external calls. Rank risks with file-and-line evidence.",
-      "@Skill Risk Check Give me a go-or-no-go. List what blocks installation, what must be fixed, and what I still need to review."
+      "I found a viral skill repo on Twitter. Before I install it, audit the public repo and flag anything unsafe.",
+      "Audit this plugin's scripts, permissions, and external calls. Rank risks with file-and-line evidence.",
+      "Give me a go-or-no-go. List what blocks installation, what must be fixed, and what I still need to review."
     ],
     "brandColor": "#0183E0",
     "composerIcon": "./assets/icon.png",

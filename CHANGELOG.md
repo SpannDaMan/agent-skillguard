@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.5 — OpenAI no-mention prompt compliance
+
+- Removed the leading plugin `@mention` from all three store prompts because OpenAI requires mention-free starter text.
+- Preserved the approved viral-repo, file-and-line risk, and go-or-no-go wording and order.
+- Kept the locked full-bleed Silver Satin marketplace identity unchanged.
+
 ## 0.1.4 — OpenAI starter-prompt limit compliance
 
 - Tightened all three approved proactive audit examples to 128 characters or fewer for OpenAI's store limit.
