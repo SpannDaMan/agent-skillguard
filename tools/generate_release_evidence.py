@@ -86,7 +86,7 @@ def main() -> int:
         unsafe_report = json.loads(unsafe_run.stdout)
         package_receipt: dict[str, object] = {
             "schema_version": "1.0",
-            "candidate": "agent-skillguard 0.1.3",
+            "candidate": "agent-skillguard 0.1.4",
             "product_revision_sha256": revision,
             "status": "pass",
             "python_version": f"{sys.version_info.major}.{sys.version_info.minor}",
@@ -111,7 +111,7 @@ def main() -> int:
     plugin_run = run([sys.executable, str(validator), "plugins/agent-skillguard"], cwd=ROOT)
     plugin_receipt: dict[str, object] = {
         "schema_version": "1.0",
-        "candidate": "agent-skillguard 0.1.3",
+        "candidate": "agent-skillguard 0.1.4",
         "product_revision_sha256": revision,
         "status": "pass",
         "exit_code": plugin_run.returncode,
@@ -134,7 +134,7 @@ def main() -> int:
         VALIDATION / "Claude Plugin Verification 220826.json",
         {
             "schema_version": "1.0",
-            "candidate": "agent-skillguard 0.1.3",
+            "candidate": "agent-skillguard 0.1.4",
             "product_revision_sha256": revision,
             "status": "pass",
             "validated_paths": [".", "plugins/agent-skillguard"],
@@ -159,7 +159,7 @@ def main() -> int:
         VALIDATION / "JSON Schema Verification 220826.json",
         {
             "schema_version": "1.0",
-            "candidate": "agent-skillguard 0.1.3",
+            "candidate": "agent-skillguard 0.1.4",
             "product_revision_sha256": revision,
             "status": "pass",
             "command": ["python", "-B", "tools/validate_json_schema.py", "--schema", "submission/openai-plugin-submission.schema.json", "--instance", "submission/openai-plugin-submission.json"],
@@ -176,7 +176,7 @@ def main() -> int:
         VALIDATION / "Cross-Platform Packaging Review 220826.json",
         {
             "schema_version": "1.0",
-            "candidate": "agent-skillguard 0.1.3",
+            "candidate": "agent-skillguard 0.1.4",
             "product_revision_sha256": revision,
             "status": "pass",
             "checks": {
@@ -198,7 +198,7 @@ def main() -> int:
         VALIDATION / "Publication Override 220826.json",
         {
             "schema_version": "1.0",
-            "candidate": "agent-skillguard 0.1.3",
+            "candidate": "agent-skillguard 0.1.4",
             "product_revision_sha256": revision,
             "status": "scoped_override_recorded",
             "scope": "Agent SkillGuard public-package preparation and root-owned publication only",

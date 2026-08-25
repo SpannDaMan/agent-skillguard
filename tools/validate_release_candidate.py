@@ -144,7 +144,7 @@ def validate_metadata() -> list[str]:
     except (OSError, json.JSONDecodeError) as exc:
         return [f"metadata JSON failed: {exc}"]
     interface = codex.get("interface", {})
-    if codex.get("name") != "agent-skillguard" or codex.get("version") != "0.1.3" or codex.get("license") != "MIT":
+    if codex.get("name") != "agent-skillguard" or codex.get("version") != "0.1.4" or codex.get("license") != "MIT":
         errors.append("Codex plugin identity or version mismatch")
     if codex.get("repository") != "https://github.com/SpannDaMan/agent-skillguard":
         errors.append("Codex plugin repository mismatch")
@@ -159,21 +159,21 @@ def validate_metadata() -> list[str]:
     if "screenshots" in interface:
         errors.append("skills-only plugin must not declare interface.screenshots")
     expected_prompts = [
-        "I just found this agent-skill repo on Twitter and it’s going viral. Before I download or install it, audit the public repo for hidden instructions, suspicious scripts or downloads, broad permissions, and possible secret exposure. Show me the highest-risk findings with file-and-line evidence, and do not run anything.",
-        "I’m considering adding this plugin to our agent stack. Review its instructions, scripts, permissions, and external calls, then give me a ranked risk report showing the exact files and lines I need to inspect before approval.",
-        "Give me a simple go-or-no-go recommendation for this skill. List anything that would block installation, what should be fixed first, and what I still need to review before approving it.",
+        "@Skill Risk Check I found a viral skill repo on Twitter. Before I install it, audit the public repo and flag anything unsafe.",
+        "@Skill Risk Check Audit this plugin's scripts, permissions, and external calls. Rank risks with file-and-line evidence.",
+        "@Skill Risk Check Give me a go-or-no-go. List what blocks installation, what must be fixed, and what I still need to review.",
     ]
     if interface.get("defaultPrompt") != expected_prompts:
         errors.append("Codex starter prompts mismatch")
     entry = local_market.get("plugins", [{}])[0]
     if local_market.get("owner", {}).get("name") != "Orbral" or entry.get("source") != "./plugins/agent-skillguard":
         errors.append("local marketplace identity or source mismatch")
-    if entry.get("version") != "0.1.3" or entry.get("category") != "Security" or entry.get("policy") != {"installation": "AVAILABLE", "authentication": "ON_INSTALL"}:
+    if entry.get("version") != "0.1.4" or entry.get("category") != "Security" or entry.get("policy") != {"installation": "AVAILABLE", "authentication": "ON_INSTALL"}:
         errors.append("local marketplace policy mismatch")
     claude_entry = claude_market.get("plugins", [{}])[0]
-    if claude_market.get("owner", {}).get("name") != "Orbral" or claude_entry.get("name") != "skill-risk-check" or claude_entry.get("source") != "./plugins/agent-skillguard" or claude_entry.get("version") != "0.1.3":
+    if claude_market.get("owner", {}).get("name") != "Orbral" or claude_entry.get("name") != "skill-risk-check" or claude_entry.get("source") != "./plugins/agent-skillguard" or claude_entry.get("version") != "0.1.4":
         errors.append("Claude marketplace metadata mismatch")
-    if claude.get("name") != "skill-risk-check" or claude.get("version") != "0.1.3" or claude.get("author", {}).get("name") != "Orbral":
+    if claude.get("name") != "skill-risk-check" or claude.get("version") != "0.1.4" or claude.get("author", {}).get("name") != "Orbral":
         errors.append("Claude plugin identity mismatch")
     if submission.get("submission_type") != "skills_only" or submission.get("publisher") != "Orbral" or submission.get("category") != "Security":
         errors.append("OpenAI submission identity mismatch")
@@ -411,7 +411,7 @@ def run_validation(*, targeted: bool = False) -> dict[str, Any]:
     return {
         "status": "pass" if not errors else "fail",
         "mode": "targeted" if targeted else "frozen_candidate_full_gate",
-        "candidate": "agent-skillguard 0.1.3",
+        "candidate": "agent-skillguard 0.1.4",
         "product_revision_sha256": current_revision(),
         "checks": {name: "pass" if not group else "fail" for name, group in checks.items()},
         "publication_action": "none",
