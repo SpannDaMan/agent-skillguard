@@ -1,7 +1,7 @@
 {
   "name": "skill-risk-check",
   "description": "Use before installing an agent skill or plugin; scan local files for risky instructions, permissions, downloads, and possible secret exposure without running the target.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": {
     "name": "Orbral"
   },

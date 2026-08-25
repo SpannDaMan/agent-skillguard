@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
-  "candidate": "agent-skillguard 0.1.3",
-  "product_revision_sha256": "7d279a79692be20d0b14284dfd99de2129c89ba42fedb6350a9f9cedde5cab8e",
+  "candidate": "agent-skillguard 0.1.4",
+  "product_revision_sha256": "28687416f22462db77afcaf3448821bd2f68bb142f16ba4cb4ed80ee794cac52",
   "status": "pass",
   "python_version": "3.12",
   "install_source": ".",
   "runtime_dependencies": [],
   "wheel": {
-    "filename": "agent_skillguard-0.1.3-py3-none-any.whl",
-    "sha256": "23b78b2293e150686b2ef4ae7e31ede65446e5bdfc9d460f274d4e54658e18fa",
-    "bytes": 19385
+    "filename": "agent_skillguard-0.1.4-py3-none-any.whl",
+    "sha256": "69fd6355d4af009db9b6b472095820fbe315412e37a389b90d0f43fa941679ab",
+    "bytes": 19384
   },
   "checks": [
     {
@@ -24,7 +24,7 @@
     {
       "name": "installed_cli_version",
       "status": "pass",
-      "result": "agent-skillguard 0.1.3"
+      "result": "agent-skillguard 0.1.4"
     },
     {
       "name": "installed_clean_fixture",

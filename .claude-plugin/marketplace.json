@@ -9,7 +9,7 @@
       "name": "skill-risk-check",
       "source": "./plugins/agent-skillguard",
       "description": "Use before installing an agent skill or plugin; scan local files for risky instructions, permissions, downloads, and possible secret exposure without running the target.",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "category": "security",
       "keywords": ["plugin security", "agent skills", "pre-install scan", "prompt injection", "supply chain"],
       "tags": ["security", "plugins", "local", "sarif"]

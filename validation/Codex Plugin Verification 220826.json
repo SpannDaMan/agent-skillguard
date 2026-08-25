@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "candidate": "agent-skillguard 0.1.3",
-  "product_revision_sha256": "7d279a79692be20d0b14284dfd99de2129c89ba42fedb6350a9f9cedde5cab8e",
+  "candidate": "agent-skillguard 0.1.4",
+  "product_revision_sha256": "28687416f22462db77afcaf3448821bd2f68bb142f16ba4cb4ed80ee794cac52",
   "status": "pass",
   "exit_code": 0,
   "validated_plugin_path": "plugins/agent-skillguard",

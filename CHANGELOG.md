@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4 — OpenAI starter-prompt limit compliance
+
+- Tightened all three approved proactive audit examples to 128 characters or fewer for OpenAI's store limit.
+- Preserved the viral-repo, file-and-line risk, and go-or-no-go natural-use flows.
+- Kept the locked full-bleed Silver Satin marketplace identity unchanged.
+
 ## 0.1.3 — proactive audit examples and Silver Satin identity
 
 - Added the operator-approved viral-repo, agent-stack review, and go-or-no-go starter prompts.
